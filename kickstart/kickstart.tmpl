@@ -55,9 +55,15 @@ desktop #slurp
 --session="${metadata.Session}"
 #end if
 #end if
-#if $metadata.has_key("DefaultUser") and $metadata.DefaultUser
 
-user --name ${metadata.DefaultUser}  --groups audio,video --password ${metadata.DefaultUserPass} 
+#if $metadata.has_key("DefaultUser") and $metadata.DefaultUser
+user #slurp
+--name ${metadata.DefaultUser} #slurp
+#if $metadata.has_key("DefaultUserGecos") and $metadata.DefaultUserGecos
+--gecos "${metadata.DefaultUserGecos}" #slurp
+#end if
+--groups audio,video #slurp
+--password ${metadata.DefaultUserPass}
 #end if
 
 #set $options_global = ""
