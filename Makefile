@@ -1,5 +1,5 @@
 VERSION = $(shell cat VERSION)
-NAME=mer-kickstarter
+NAME=maui-kickstarter
 TAGVER = $(shell cat VERSION | sed -e "s/\([0-9\.]*\).*/\1/")
 
 ifeq ($(VERSION), $(TAGVER))

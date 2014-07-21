@@ -24,13 +24,13 @@ except IOError:
 
 
 
-setup(name='mer-kickstarter',
+setup(name='maui-kickstarter',
       version = version,
-      description='Kickstarter for Mer',
-      author='Marko Saukko',
-      author_email='sage@merproject.org',
-      url='http://www.merproject.org/',
-      scripts=['tools/mer-kickstarter'],
+      description='Kickstarter for Maui',
+      author='Pier Luigi Fiorini',
+      author_email='pierluigi.fiorini@maui-project.org',
+      url='http://www.maui-project.org/',
+      scripts=['tools/maui-kickstarter'],
       packages=['kickstart']
      )
 
