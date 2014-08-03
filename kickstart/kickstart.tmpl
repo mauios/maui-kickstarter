@@ -45,7 +45,7 @@ bootloader #slurp
 #if $metadata.has_key("Desktop")
 
 desktop #slurp
-#if $metadata.has_key("DefaultUser") and $metadata.DefaultUser
+#if $metadata.has_key("DefaultUser") and $metadata.DefaultUser and $metadata.get("DefaultUserAutologin", False) == True
 --autologinuser=${metadata.DefaultUser}  #slurp
 #end if
 #if $metadata.Desktop != "None"
