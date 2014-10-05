@@ -128,6 +128,11 @@ class KSWriter():
             for scr in conf['PostScripts']:
                 postscript += self.__read_config_file(image_meta,scr)
 
+        packscript = ""
+        if conf.has_key('PackScripts'):
+            for scr in conf['PackScripts']:
+                packscript += self.__read_config_file(image_meta,scr)
+
         nochrootscript = ""
         if conf.has_key('NoChrootScripts'): 
             for scr in conf['NoChrootScripts']:
@@ -145,6 +150,8 @@ class KSWriter():
             conf['Pre'] = prescript
         if postscript:
             conf['Post'] = postscript
+        if packscript:
+            conf['Pack'] = packscript
         if nochrootscript:
             conf['NoChroot'] = nochrootscript
         return conf

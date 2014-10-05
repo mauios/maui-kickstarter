@@ -142,3 +142,9 @@ ${metadata.Post}
 ${metadata.NoChroot}
 %end
 #end if
+
+#if $metadata.has_key("Pack")
+%pack
+${metadata.Pack}
+%end
+#end if
