@@ -10,7 +10,7 @@ Name:       maui-kickstarter
 
 %{!?python_sitelib: %define python_sitelib %(%{__python} -c "from distutils.sysconfig import get_python_lib; print get_python_lib()")}
 Summary:    Create kickstart files for Maui images
-Version:    0.99.2
+Version:    0.99.3
 Release:    1
 Group:      System/Base
 License:    GPLv2
