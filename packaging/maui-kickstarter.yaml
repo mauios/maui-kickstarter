@@ -1,0 +1,24 @@
+Name: maui-kickstarter
+Summary: Create kickstart files for Maui images
+Version: 0.99.2
+Release: 1
+Group: System/Base
+License: GPLv2
+URL: http://www.maui-project.org
+Sources:
+  - "%{name}-%{version}.tar.xz"
+SetupOptions: -q -n %{name}-%{version}
+Description: Create Configuration files to build Maui images.
+Requires:
+  - python-yaml
+  - python-urlgrabber
+  - python-cheetah
+  - python-lxml
+PkgConfigBR:
+  - python-2.7
+PkgBR:
+  - python-cheetah
+Configure: none
+Builder: python
+BuildArch: noarch
+Patches: []
