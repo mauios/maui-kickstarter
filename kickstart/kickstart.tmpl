@@ -62,7 +62,11 @@ user #slurp
 #if $metadata.has_key("DefaultUserGecos") and $metadata.DefaultUserGecos
 --gecos="${metadata.DefaultUserGecos}" #slurp
 #end if
+#if $metadata.has_key("DefaultUserGroups") and $metadata.DefaultUserGroups
+--groups=${metadata.DefaultUserGroups} #slurp
+#else
 --groups=audio,video #slurp
+#end if
 --password="${metadata.DefaultUserPass}"
 #end if
 
